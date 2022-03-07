@@ -5,13 +5,15 @@ import { Injectable } from '@angular/core';
 })
 export class OrderDetailsService {
 
+  
+
   constructor() { }
 
   foodDetails = [
     {
       id:1,
       foodName:"Sandwich",
-      foodDetails:"Bread",
+      foodDetails:"Bread| Ham| Cheese| Tomato| Lettuce",
       foodPrice:200,
       foodImg:"https://static3.depositphotos.com/1006775/228/i/950/depositphotos_2281835-stock-photo-bread-and-butter.jpg"
     },
@@ -25,7 +27,7 @@ export class OrderDetailsService {
     {
       id:3,
       foodName:"Veggie Soup",
-      foodDetails:"Carrot| Pea| Sweet Corn| Broccoli| Tomato| Potato",
+      foodDetails:"Carrot| Sweet Corn| Broccoli| Tomato| Potato",
       foodPrice:149,
       foodImg:"https://thecozyapron.com/wp-content/uploads/2018/07/vegetable-soup_thecozyapron_1.jpg"
     },
@@ -39,7 +41,7 @@ export class OrderDetailsService {
     {
       id:5,
       foodName:"Fried Rice",
-      foodDetails:"Rice",
+      foodDetails:"Rice| Salt| Garlic| Onion| Pepper| Chives| Sesame Oil",
       foodPrice:105,
       foodImg:"https://media.newyorker.com/photos/5f2c85539a557880d973a759/1:1/w_1823,h_1823,c_limit/Buford-FrenchRice.jpg"
     },

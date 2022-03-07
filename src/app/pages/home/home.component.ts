@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { OrderDetailsService } from 'src/app/services/order-details.service';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -13,5 +16,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.foodData = this.service.foodDetails;
   }
+
 
 }

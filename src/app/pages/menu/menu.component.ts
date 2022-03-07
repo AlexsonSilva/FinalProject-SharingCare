@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { OrderDetailsService } from 'src/app/services/order-details.service';
 
 @Component({
@@ -8,8 +9,9 @@ import { OrderDetailsService } from 'src/app/services/order-details.service';
 })
 export class MenuComponent implements OnInit {
 
+  
   constructor(private service:OrderDetailsService) { }
-  foodData:any;
+  foodData: any;
   ngOnInit(): void {
     this.foodData = this.service.foodDetails;
   }
