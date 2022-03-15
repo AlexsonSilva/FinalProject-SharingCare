@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 mt-5">
+          <div class="card border-0 shadow p-3">
+            <div class="form-floating mb-3 text-center">
+               <h5 class="text-center text-warning">Add Event</h5>
+              </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="restName" name="restname" [(ngModel)]="restName">
+                    <label for="restname">Restaurant Name</label>
+                  </div>
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="dishName" name="dishname" [(ngModel)]="dishName">
+                    <label for="dishname">Dish Name</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="date" class="form-control" id="eventDate" name="eventdate" [(ngModel)]="eventDate">
+                    <label for="eventdate">Date </label>
+                  </div>
+                  <button type="button" class="btn btn-outline-success" (click)="addEvent()">Add Event</button>
+          </div>
+      </div>
+       <div class="col-md-8 md-2">
+            <h5 class="text-danger">Event List</h5>
+            <div class="card p-3 shadow">
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Restaurant Name</th>
+                            <th scope="col">Dish Name</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let event of eventList">
+                            <td>{{event.restName}}</td>  
+                            <td>{{event.dishName}}</td>
+                            <td>{{event.eventDate}}</td>
+                            <td>
+                                <button class="btn btn-outline-danger" (click)="deleteEvent(event)">Delete</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+       </div>
+    </div>
+</div>

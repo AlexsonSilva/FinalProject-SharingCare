@@ -3,6 +3,7 @@ import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTr
 import { Observable } from 'rxjs';
 
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AuthService } from './auth.service';
 
 
 @Injectable({
@@ -10,7 +11,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 })
 export class AuthGuard implements CanActivate {
 
-  constructor(private router: Router, private afAuth: AngularFireAuth){
+  constructor(private userService: AuthService, private router: Router, private afAuth: AngularFireAuth){
 
   }
 
@@ -23,7 +24,7 @@ export class AuthGuard implements CanActivate {
           resolve(true);
         }else {
           console.log('Auth Guard: user is not logged in');
-          this.router.navigate(['/home']);
+          this.router.navigate(['/login']);
           resolve(false);
         }
       })
