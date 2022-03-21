@@ -1,6 +1,6 @@
 .banner
 {
-    background-image: url('../../../assets/img/bannerimg.jpg');
+    background-image: url('../../../assets/img/bannerim0.jpg');
     height: 600px;
     background-position: center top;
     background-size: cover;
@@ -10,7 +10,7 @@
     top: 30%;
     left: 20%;
     position: absolute;
-    background-color: rgb(0, 153, 255);
+    
     
 }
 .content h1 
