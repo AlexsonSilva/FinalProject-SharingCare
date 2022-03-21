@@ -7,9 +7,7 @@ import { MenupageComponent } from './pages/menupage/menupage.component';
 import { AboutComponent } from './pages/about/about.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
-
 import { AuthGuard } from './services/auth.guard';
-import { DonateconfirmationComponent } from './pages/donateconfirmation/donateconfirmation.component';
 import { EventsComponent } from './pages/events/events.component';
 
 
@@ -20,7 +18,6 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'signup', component: SignupComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'donateconfirmation', component: DonateconfirmationComponent},
   {path: 'events', component: EventsComponent, canActivate: [AuthGuard]}
  
 ]

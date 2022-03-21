@@ -66,7 +66,7 @@ export class EventsComponent implements OnInit {
 
   deleteEvent(event : restEvent){
 
-    if(window.confirm('Are you sure you want to delete '+event.dishName+ ' '+event.restName+ ' ?')){
+    if(window.confirm('Are you sure you want to delete the event: '+event.eventDate+ ' '+ ' ?')){
     this.data.deleteEvent(event);
    }
  }
