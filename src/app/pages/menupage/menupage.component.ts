@@ -85,6 +85,7 @@ export class MenupageComponent implements OnInit {
     this.donationObj.donQuantity = this.donQuantity;
 
     this.service.addDonation(this.donationObj);
+    alert('Thank you for your Dontation!');
     this.resetForm();
   }
 
